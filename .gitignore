@@ -27,3 +27,4 @@ ip_bans.yaml
 \#*.yaml
 config.py
 ios.conf
+sslcheck.yaml

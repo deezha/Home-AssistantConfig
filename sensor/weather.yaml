@@ -1,6 +1,6 @@
 #Darksky weather
 - platform: darksky
-  api_key: 9c330b12e7462c57669a5452b409ef22
+  api_key: !secret forecast_key
   monitored_conditions:
     - summary
     - temperature
