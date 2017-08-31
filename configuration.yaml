@@ -20,13 +20,8 @@ frontend:
 
 http:
   api_password: !secret http_password
-#  server_host: 192.168.1.22
-  ssl_certificate: /etc/letsencrypt/live/deezha.duckdns.org/fullchain.pem
-  ssl_key: /etc/letsencrypt/live/deezha.duckdns.org/privkey.pem
-#  base_url: deezha.duckdns.org:8123
-#  trusted_networks:
-#    - 192.168.1.0/24
-# use_x_forwarded_for: True
+  ssl_certificate: !secret http_ssl_cert 
+  ssl_key: !secret http_ssl_key 
   ip_ban_enabled: True
   login_attempts_threshold: 5
 
@@ -126,16 +121,6 @@ tradfri:
 
 influxdb:
   host: 127.0.0.1
-
-#Media Players
-#media_player:
-#  - platform: emby
-#    host: 127.0.0.54
-#    api_key: add2a4a612dd4a688e64ae1efb9eb759
-#  - platform: kodi
-#    host: 192.168.1.24
-#    username: kodi
-#  - platform: cast
 
 # Enables the Weblink Components
 weblink:
