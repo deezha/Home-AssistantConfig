@@ -1,0 +1,9 @@
+localhosts:
+  name: LocalHosts
+  entities:
+    - device_tracker.pihole
+    - device_tracker.nextcloud
+    - device_tracker.synology 
+    - sensor.sabnzbd_status
+    - sensor.ssl_cert_expiry
+    - device_tracker.a0cc2b6f6645

@@ -1,0 +1,12 @@
+- platform: bitcoin  
+  currency: USD  
+  display_options:  
+    - exchangerate  
+#- platform: yahoo_finance
+#  symbols:
+#    - INTC
+#    - GOOG
+- platform: coinmarketcap
+  currency: litecoin
+- platform: coinmarketcap
+  currency: ethereum

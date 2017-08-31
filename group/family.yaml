@@ -1,0 +1,7 @@
+family:
+  name: Family
+  entities:
+   - device_tracker.phone_phone
+   - device_tracker.davidsiphone7
+   - sensor.davidsiphone7_battery_level
+   - sensor.davidsiphone7_battery_state

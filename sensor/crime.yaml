@@ -1,0 +1,5 @@
+#crime reports
+- platform: crimereports
+  name: Neighborhood Incidents
+  radius: 7300
+

@@ -1,0 +1,4 @@
+crime:
+  name: Crime
+  entities:
+   - sensor.neighborhood_incidents

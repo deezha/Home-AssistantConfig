@@ -1,0 +1,12 @@
+#Darksky weather
+- platform: darksky
+  api_key: 9c330b12e7462c57669a5452b409ef22
+  monitored_conditions:
+    - summary
+    - temperature
+    - daily_summary
+    - hourly_summary
+    - temperature_max
+    - temperature_min
+    - humidity
+- platform: moon

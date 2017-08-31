@@ -1,0 +1,18 @@
+#Pi system monitor
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: ipv4_address
+      arg: eth0
+    - type: since_last_boot
+- platform: cpuspeed
+  name: CPU 
+- platform: template
+  sensors:
+    sunrise:
+      value_template: '{{ states.sun.sun.attributes.next_rising }}'
+
+

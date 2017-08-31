@@ -1,0 +1,34 @@
+device_tracker.davidsiphone7:
+  friendly_name: 'Dave'
+  icon: mdi:face
+
+sensor.aeotec_zw096_smart_switch_6_current:
+  friendly_name: 'sw_current'
+
+sensor.aeotec_zw096_smart_switch_6_energy:
+  friendly_name: 'sw_energy'
+
+sensor.aeotec_zw096_smart_switch_6_power:
+  friendly_name: 'sw_power'
+
+sensor.aeotec_zw096_smart_switch_6_previous_reading:
+  friendly_name: 'sw_previous reading'
+
+sensor.aeotec_zw096_smart_switch_6_voltage:
+  friendly_name: 'sw_voltage'
+
+switch.aeotec_zw096_smart_switch_6_switch:
+  friendly_name: 'Switch'
+
+device_tracker.a0cc2b6f6645:
+  friendly_name: 'Tradfri Hub'
+
+light.tradfri_bulb_e12_ws_opal_400lm:
+  friendly_name: 'Bulb1'
+
+light.tradfri_bulb_e12_ws_opal_400lm_2:
+  friendly_name: 'Bulb2'
+
+light.tradfri_bulb_e12_ws_opal_400lm_3:
+  friendly_name: 'Bulb3'
+  

@@ -1,0 +1,27 @@
+######################################################
+#
+#  Notify if HA has an update
+#
+######################################################
+- alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.ios_davidsiphone7
+    data:
+      message: ‘Update for Home Assistant is available’
+
+######################################################
+#
+#  Notify if HA has been started
+#
+######################################################
+- alias: HASS Startup Notification
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    service: notify.ios_davidsiphone7
+    data:
+      message: 'Home assistant started'

@@ -1,0 +1,6 @@
+links:
+  name: WebLinks
+  entities:
+   - weblink.pihole
+   - weblink.synology
+   - weblink.nextcloud

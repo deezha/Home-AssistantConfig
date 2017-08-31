@@ -1,0 +1,31 @@
+######################################################
+#
+#  Notify if nextcloud or synology go offline
+#
+######################################################
+
+- alias: ‘Notification Nextcloud Offline’
+  initial_state: True
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: device_tracker.nextcloud
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.ios_davidsiphone7
+    data:
+      message: ‘Nextcloud Device is Offline'
+
+- alias: ‘Notification Synology Offline’
+  initial_state: True
+  hide_entity: false
+  trigger:
+    platform: state
+    entity_id: device_tracker.synology
+    from: 'home'
+    to: 'not_home'
+  action:
+    service: notify.ios_davidsiphone7
+    data:
+      message: ‘Synology Device is Offline'

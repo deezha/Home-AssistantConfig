@@ -1,0 +1,32 @@
+default_view:
+  view: yes
+  icon: mdi:home 
+  entities:
+    - group.commute
+    - group.family
+lights:
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.livingroom
+    - group.switch
+    - group.media
+weather:
+  view: yes
+  icon: mdi:weather-cloudy
+  entities:
+    - group.weathers
+    - group.tide_times
+    - group.crime
+    - camera.outside_office
+system:
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.Rasp_Pi
+    - group.utilities
+    - group.links
+    - group.automationsgroup
+    - group.financial
+    - group.localhosts
+    - group.synology

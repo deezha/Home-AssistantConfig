@@ -1,0 +1,9 @@
+automationsgroup:
+  name: Automations
+  entities:
+   - automation.dave_commute_to_home_notification
+   - automation.dave_commute_to_work_notification
+   - automation.notification_nextcloud_offline
+   - automation.notification_pihole_offline
+   - automation.notification_synology_offline
+   - automation.update_available_notifications

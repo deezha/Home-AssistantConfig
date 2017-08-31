@@ -1,0 +1,6 @@
+# Only the 'entity_id' is required.  All other options are optional.
+media_player.nexus_player:
+  friendlyname: 'Nexus'
+  hidden: true
+
+  

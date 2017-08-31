@@ -1,0 +1,10 @@
+Rasp Pi:
+  name: Pi
+  entities:
+   - sensor.cpu
+   - sensor.cpu_use
+   - sensor.ram_free
+   - sensor.ram_use
+   - sensor.ipv4_address_eth0
+   - sensor.disk_use_home
+   - sensor.since_last_boot

@@ -1,0 +1,9 @@
+weblink.pihole:
+  friendly_name: 'PiHole Web Interface'
+  icon: mdi:dns
+weblink.synology:
+  friendly_name: 'Synology Admin'
+  icon: mdi:dns
+weblink.nextcloud:
+  friendly_name: 'Nextcloud Web Interface'
+  icon: mdi:dns

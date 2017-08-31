@@ -1,0 +1,14 @@
+sensor.dark_sky_temperature:
+  friendly_name: ‘Current Temperature'
+sensor.dark_sky_daily_summary:
+  friendly_name: 'Forecast 7 days'
+sensor.dark_sky_hourly_summary:
+  friendly_name: 'Forecast 24hrs'
+sensor.dark_sky_daily_high_temperature:
+  friendly_name: 'Todays High Temp'
+sensor.dark_sky_daily_low_temperature:
+  friendly_name: 'Todays Low Temp'
+sensor.dark_sky_summary:
+  friendly_name: 'Summary'
+sensor.dark_sky_humidity:
+  friendly_name: 'Humidity'

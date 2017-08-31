@@ -1,0 +1,57 @@
+
+#####################################################
+#
+#  Dave Commute to Work Notification
+#
+#####################################################
+
+- alias: ‘Dave Commute To Work Notification’
+  initial_state: True
+  hide_entity: false
+  trigger:
+    platform: time
+    at: '17:55:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: device_tracker.phone_phone
+        state: 'home'
+      - condition: time
+        weekday:
+          - sat
+          - sun
+          - mon
+          - tue
+  action:
+    service: notify.ios_davidsiphone7
+    data:
+      message: 'Commute time to work is currently {{ states.sensor.home_to_daves_work.state }} minutes.'
+
+#####################################################
+#
+#  Dave Commute to Home Notification
+#
+#####################################################
+- alias: ‘Dave Commute To Home Notification’
+  initial_state: True
+  hide_entity: false
+  trigger:
+    platform: time
+    at: '08:15:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: device_tracker.phone_phone
+        state: 'work'
+      - condition: time
+        weekday:
+          - sun
+          - mon
+          - tue
+          - wed
+  action:
+    service: notify.ios_davidsiphone7
+    data:
+      message: 'Commute time to home is currently {{ states.sensor.daves_work_to_home.state }} minutes.'

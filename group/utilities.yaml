@@ -1,0 +1,8 @@
+utilities:
+  name: Switch Stats
+  entities:
+   - sensor.aeotec_zw096_smart_switch_6_voltage
+   - sensor.aeotec_zw096_smart_switch_6_current
+   - sensor.aeotec_zw096_smart_switch_6_energy
+   - sensor.aeotec_zw096_smart_switch_6_power
+   - sensor.aeotec_zw096_smart_switch_6_previous_reading

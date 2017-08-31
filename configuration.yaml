@@ -1,0 +1,157 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret elevation_home
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Los_Angeles
+  customize: !include_dir_merge_named customize
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  api_password: !secret http_password
+#  server_host: 192.168.1.22
+  ssl_certificate: /etc/letsencrypt/live/deezha.duckdns.org/fullchain.pem
+  ssl_key: /etc/letsencrypt/live/deezha.duckdns.org/privkey.pem
+#  base_url: deezha.duckdns.org:8123
+#  trusted_networks:
+#    - 192.168.1.0/24
+# use_x_forwarded_for: True
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
+
+#Enables the Configuration Panel
+config:
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+#discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Default logging information
+logger:
+  default: warn
+
+# Track the sun
+sun:
+
+# Enables the iOS component
+ios:
+
+# Database Purge
+recorder:
+  purge_days: 5
+
+# Enables support for tracking state changes over time.
+history:
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+
+# View all events in a logbook
+logbook:
+  exclude:
+    entities:
+      - sensor.cpu
+      - sensor.cpu_use
+      - sensor.ram_free
+      - sensor.ipv4_address_eth0
+      - sensor.disk_use_home
+      - sensor.since_last_boot
+      - sensor.aeotec_zw096_smart_switch_6_voltage
+      - sensor.aeotec_zw096_smart_switch_6_current
+      - sensor.aeotec_zw096_smart_switch_6_energy
+      - sensor.aeotec_zw096_smart_switch_6_power
+    domains:
+      - sun
+
+# Zone Assignments
+zone 2:
+  name: work
+  latitude: !secret latitude_work
+  longitude: !secret longitude_work
+  radius: 150
+  icon: mdi:briefcase
+
+zone 3:
+  name: school
+  latitude: !secret latitude_school
+  longitude: !secret longitude_school
+  radius: 150
+  icon: mdi:school
+
+# Enables the MQTT Component
+mqtt:
+  broker: m13.cloudmqtt.com
+  port: 18072
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqttusr
+  password: !secret mqttpass
+
+# Device Tracking
+device_tracker:
+  - platform: owntracks
+  - platform: nmap_tracker
+    hosts: 192.168.1.1/24
+    home_interval: 10
+    track_new_devices: false
+
+camera:
+  - platform: generic
+    still_image_url: http://192.168.1.23/picture/1/current/?_username=admin&_signature=f15e5afd0490eb04c6ddd3f90e8f3e993c95ad55
+    name: Outside Office
+    scan_interval: 60
+
+# Enable Tradfr
+tradfri:
+  host: !secret tradfriip
+  api_key: !secret tradfriapi
+
+influxdb:
+  host: 127.0.0.1
+
+#Media Players
+#media_player:
+#  - platform: emby
+#    host: 127.0.0.54
+#    api_key: add2a4a612dd4a688e64ae1efb9eb759
+#  - platform: kodi
+#    host: 192.168.1.24
+#    username: kodi
+#  - platform: cast
+
+# Enables the Weblink Components
+weblink:
+  entities: 
+    - name: PiHole
+      url: http://192.168.1.21/admin
+    - name: Synology
+      url: http://192.168.1.9:5000/webman/index.cgi
+    - name: Nextcloud
+      url: http://192.168.1.31/nextcloud/
+
+group: !include_dir_merge_named group
+
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /srv/homeassistant/homeassistant_venv/lib/python3.4/site-packages/libopenzwave-0.3.1-py3.4-linux-armv7l.egg/config
+
+automation: !include_dir_merge_list automation
+sensor: !include_dir_merge_list sensor

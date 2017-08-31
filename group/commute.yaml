@@ -1,0 +1,7 @@
+commute:
+  name: Commute
+  entities:
+   - sensor.home_to_daves_work
+   - sensor.daves_work_to_home
+   - sensor.home_to_school
+#   - sensor.dave_location_to_home    

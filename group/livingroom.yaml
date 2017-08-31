@@ -1,0 +1,6 @@
+livingroom:
+  name: Living Room Light
+  entities:
+    - light.tradfri_bulb_e12_ws_opal_400lm
+    - light.tradfri_bulb_e12_ws_opal_400lm_2
+    - light.tradfri_bulb_e12_ws_opal_400lm_3

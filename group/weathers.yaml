@@ -1,0 +1,17 @@
+weathers:
+  name: Weather
+  entities:
+   - sensor.dark_sky_daily_summary
+   - sensor.dark_sky_hourly_summary
+   - sensor.dark_sky_daily_high_temperature
+   - sensor.dark_sky_daily_low_temperature
+   - sensor.dark_sky_summary
+   - sensor.dark_sky_humidity
+   - sensor.dark_sky_temperature
+   - sensor.sunrise
+   - sensor.moon
+
+tide times:
+  name: Tide Times
+  entities:
+    - sensor.worldtidesinfo

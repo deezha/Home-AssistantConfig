@@ -1,0 +1,4 @@
+switch:
+  name: switch
+  entities:
+    - switch.aeotec_zw096_smart_switch_6_switch

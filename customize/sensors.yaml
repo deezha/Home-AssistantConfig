@@ -1,0 +1,11 @@
+sensor.home_to_daves_work:
+  friendly_name: 'Home to Daves Work'
+  icon: mdi:car
+
+sensor.home_to_school:
+  friendly_name: 'Home to School'
+  icon: mdi:car
+
+sensor.daves_work_to_home:
+  friendly_name: 'Daves Work to Home'
+  icon: mdi:car
