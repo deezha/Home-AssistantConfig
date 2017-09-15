@@ -11,7 +11,7 @@ weathers:
    - sensor.sunrise
    - sensor.moon
 
-tide times:
-  name: Tide Times
-  entities:
-    - sensor.worldtidesinfo
+#tide times:
+#  name: Tide Times
+#  entities:
+#    - sensor.worldtidesinfo
