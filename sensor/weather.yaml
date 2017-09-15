@@ -10,3 +10,7 @@
     - temperature_min
     - humidity
 - platform: moon
+- platform: template
+  sensors:
+    sunrise:
+      value_template: '{{ states.sun.sun.attributes.next_rising }}'

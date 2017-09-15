@@ -8,7 +8,7 @@ lights:
   view: yes
   icon: mdi:lightbulb-outline
   entities:
-    - group.livingroom
+    - group.livingroom_light
     - group.switch
     - group.media
 weather:

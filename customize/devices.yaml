@@ -1,6 +1,14 @@
 device_tracker.davidsiphone7:
   friendly_name: 'Dave'
+  icon: mdi:human-male
+
+device_tracker.phone_phone:
+  friendly_name: 'Dave_owntracks'
   icon: mdi:face
+
+device_tracker.alexsiphone6:
+  friendly_name: 'Alex'
+  icon: mdi:human-female
 
 sensor.aeotec_zw096_smart_switch_6_current:
   friendly_name: 'sw_current'

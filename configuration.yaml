@@ -110,7 +110,7 @@ device_tracker:
 
 camera:
   - platform: generic
-    still_image_url: http://192.168.1.23/picture/1/current/?_username=admin&_signature=f15e5afd0490eb04c6ddd3f90e8f3e993c95ad55
+    still_image_url: http://10.0.1.23/picture/1/current/?_username=admin&_signature=f15e5afd0490eb04c6ddd3f90e8f3e993c95ad55
     name: Outside Office
     scan_interval: 60
 
@@ -140,3 +140,4 @@ zwave:
 
 automation: !include_dir_merge_list automation
 sensor: !include_dir_merge_list sensor
+scene: !include_dir_merge_list scenes

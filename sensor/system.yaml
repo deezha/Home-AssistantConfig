@@ -10,9 +10,6 @@
     - type: since_last_boot
 - platform: cpuspeed
   name: CPU 
-- platform: template
-  sensors:
-    sunrise:
-      value_template: '{{ states.sun.sun.attributes.next_rising }}'
+
 
 
