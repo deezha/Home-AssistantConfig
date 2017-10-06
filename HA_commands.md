@@ -3,7 +3,7 @@
 **HomeAssistant Service Control:**
 
  - To check realtime logs: `sudo journalctl -fu home-assistant@hass.service`
- - To restart HomeAssistant: `sudo systemctl restart home-assistant@hass.service`
+ - To restart HomeAssistant: `sudo systemctl restart home-assistant.service`
  - To check logs: `sudo systemctl status -l home-assistant@hass.service`
  - To stop HomeAssistant: `sudo systemctl stop home-assistant@hass.service`
  - To start HomeAssistant: `sudo systemctl start home-assistant@hass.service`
